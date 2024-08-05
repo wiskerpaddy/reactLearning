@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.roulette {
+    display: inline-block;   /* よくわからない */
+    border: 1px solid #000;/* 縁取り */
+    background-color:blue;
+    font-size: 40px;         /* 文字の大きさ */
+    width: 150px;             /* 横幅 */
+    text-align: center;      /* 文字をどこに表示するのか */
+}
+.rouletteCenter {
+    display: inline-block;   /* よくわからない */
+    border: 1px solid #000;/* 縁取り */
+    background-color:white;
+    font-size: 40px;         /* 文字の大きさ */
+    width: 150px;             /* 横幅 */
+    text-align: center;      /* 文字をどこに表示するのか */
+}
+
+.buttons {
+    /* ルーレット表示部分との間隔 */
+    margin-top: 20px;
+}
