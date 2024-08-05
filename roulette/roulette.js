@@ -4,7 +4,19 @@ let idxFirst = 1;
 let idxSecond = 2;
 let idxThird = 3;
 let kaikyu = ["-60kg","-66kg","-73kg","-81kg","-90kg","-100kg","+100kg"];
-// スタートボタンを押したら呼ばれる
+let clickFlag = false;
+
+// ブラウザの任意の場所をクリックで呼ばれる
+document.addEventListener('click', function() {
+    if(clickFlag == false){
+        start();
+        clickFlag = true;
+    }else{
+        stop();
+        clickFlag = false;
+    }
+});
+
 function start() {
     if (!isRunning) {
         // 同時にstartボタンを押せないようにする処理
@@ -38,7 +50,6 @@ function start() {
         }, 350);
     }
 }
-// ストップボタンを押したら呼ばれる
 function stop() {
     // isRunningがtrueならインターバルとfalseを消す
     if (isRunning) {
